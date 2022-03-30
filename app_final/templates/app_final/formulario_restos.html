@@ -1,0 +1,27 @@
+{% extends 'app_final/base.html' %}
+
+{% block main_content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu Resto</title>
+</head>
+<body>
+    <form action "/restos/" method = 'POST'>
+
+        {% csrf_token %}
+    
+        <table>
+            {{form_resto}}
+        </table>
+    
+        <input type = "submit" value = "Crear Resto" >
+    
+    </form>
+</body>
+</html>
+
+{% endblock main_content %}

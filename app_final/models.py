@@ -18,3 +18,7 @@ class Menu(models.Model):
     nombre =  models.CharField(max_length = 40)
     descripcion =  models.CharField(max_length = 100)
     precio = models.IntegerField()
+
+class Plataforma(models.Model):
+    empresa = models.CharField(max_length = 40)
+    mail = models.EmailField(primary_key=True)
